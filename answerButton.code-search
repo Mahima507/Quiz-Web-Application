@@ -1,0 +1,22 @@
+# Query: answerButton
+# ContextLines: 1
+
+6 results - 1 file
+
+script.js:
+  142   const questionElement = document.getElementById("question");
+  143:  const answerButtons = document.getElementById("answer-buttons");
+  144   const nextButton = document.getElementById("next-btn");
+
+  164          button.classList.add("btn");
+  165:         answerButtons.appendChild(button);
+  166          if(answer.correct){
+
+  174       nextButton.style.display = "none";
+  175:      while(answerButtons.firstChild){
+  176:         answerButtons.removeChild(answerButtons.firstChild);
+  177       }
+
+  206      } 
+  207:     Array.from(answerButtons.children).forEach(button =>{
+  208          if(button.dataset.correct === "true"){
